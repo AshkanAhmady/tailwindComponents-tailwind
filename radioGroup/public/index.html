@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./build/tailwind.css" />
+    <title>dropDown</title>
+  </head>
+  <body
+    class="flex justify-center items-center h-screen bg-gradient-to-br from-purple-500 to-pink-500"
+  >
+    <div
+      x-data="{ 
+                selected: 1,
+                activeClass: 'ring-4 ring-blue-300 bg-blue-500 text-white'
+              }"
+      class="space-y-5"
+    >
+      <div
+        @click="selected = 1"
+        :class="selected === 1 ? activeClass : ''"
+        class="bg-white w-96 rounded-md px-4 py-3 flex items-center justify-between cursor-pointer"
+      >
+        <div>
+          <p class="font-bold text-lg mb-2">StartUp</p>
+          <span>12GB/6 CPUs · 160 GB SSD disk</span>
+        </div>
+        <div
+          x-show="selected === 1"
+          class="bg-blue-700 text-white rounded-full p-1"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="h-6 w-6"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+            stroke-width="2"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M5 13l4 4L19 7"
+            />
+          </svg>
+        </div>
+      </div>
+      <div
+        @click="selected = 2"
+        :class="selected === 2 ? activeClass : ''"
+        class="bg-white w-96 rounded-md px-4 py-3 flex items-center justify-between cursor-pointer"
+      >
+        <div>
+          <p class="font-bold text-lg mb-2">StartUp</p>
+          <span>12GB/6 CPUs · 160 GB SSD disk</span>
+        </div>
+        <div
+          x-show="selected === 2"
+          class="bg-blue-700 text-white rounded-full p-1"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="h-6 w-6"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+            stroke-width="2"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M5 13l4 4L19 7"
+            />
+          </svg>
+        </div>
+      </div>
+      <div
+        @click="selected = 3"
+        :class="selected === 3 ? activeClass : ''"
+        class="bg-white w-96 rounded-md px-4 py-3 flex items-center justify-between cursor-pointer"
+      >
+        <div>
+          <p class="font-bold text-lg mb-2">StartUp</p>
+          <span>12GB/6 CPUs · 160 GB SSD disk</span>
+        </div>
+        <div
+          x-show="selected === 3"
+          class="bg-blue-700 text-white rounded-full p-1"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="h-6 w-6"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+            stroke-width="2"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M5 13l4 4L19 7"
+            />
+          </svg>
+        </div>
+      </div>
+    </div>
+    <script src="//unpkg.com/alpinejs" defer></script>
+  </body>
+</html>
