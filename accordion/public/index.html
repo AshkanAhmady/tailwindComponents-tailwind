@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./build/tailwind.css" />
+    <title>Accordion</title>
+  </head>
+  <body
+    class="flex justify-center items-start h-screen bg-gradient-to-br from-sky-500 to-indigo-500"
+  >
+    <div
+      x-data="{ firstTab: true, secondTab:false }"
+      class="bg-white w-[500px] rounded-xl p-2 grid gap-3 absolute top-40"
+    >
+      <div class="w-100">
+        <div
+          @click="firstTab = !firstTab"
+          class="bg-purple-200 py-2 hover:bg-purple-300 px-4 text-purple-900 font-medium rounded-lg flex justify-between items-center cursor-pointer"
+        >
+          <span>What is your refund policy?</span>
+          <svg
+            :class="firstTab ? 'rotate-180' : ''"
+            xmlns="http://www.w3.org/2000/svg"
+            class="h-5 w-5 transition-all duration-500"
+            viewBox="0 0 20 20"
+            fill="currentColor"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M14.707 12.707a1 1 0 01-1.414 0L10 9.414l-3.293 3.293a1 1 0 01-1.414-1.414l4-4a1 1 0 011.414 0l4 4a1 1 0 010 1.414z"
+              clip-rule="evenodd"
+            />
+          </svg>
+        </div>
+        <div x-show="firstTab" class="p-4">
+          If you're unhappy with your purchase for any reason, email us within
+          90 days and we'll refund you in full, no questions asked.
+        </div>
+      </div>
+      <div class="w-100">
+        <div
+          @click="secondTab = !secondTab"
+          class="bg-purple-200 py-2 hover:bg-purple-300 px-4 text-purple-900 font-medium rounded-lg flex justify-between items-center cursor-pointer"
+        >
+          <span>Do you offer technical support?</span>
+          <svg
+            :class="secondTab ? 'rotate-180' : ''"
+            xmlns="http://www.w3.org/2000/svg"
+            class="h-5 w-5 transition-all duration-500"
+            viewBox="0 0 20 20"
+            fill="currentColor"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M14.707 12.707a1 1 0 01-1.414 0L10 9.414l-3.293 3.293a1 1 0 01-1.414-1.414l4-4a1 1 0 011.414 0l4 4a1 1 0 010 1.414z"
+              clip-rule="evenodd"
+            />
+          </svg>
+        </div>
+        <div x-show="secondTab" class="p-4">No.</div>
+      </div>
+    </div>
+
+    <script src="//unpkg.com/alpinejs" defer></script>
+  </body>
+</html>
