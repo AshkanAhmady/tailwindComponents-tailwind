@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./build/tailwind.css" />
+    <title>radioGroup</title>
+  </head>
+  <body
+    class="flex justify-center items-center h-screen bg-gradient-to-br from-violet-400 to-blue-500"
+  >
+    <div class="w-[500px]" x-data="{tab: 1}">
+      <!-- header -->
+      <div class="flex bg-blue-600 rounded-xl p-1">
+        <button
+          x-on:mousedown="tab = 1"
+          :class="tab === 1 ? 'bg-white text-blue-600' : 'bg-blue-600 text-white hover:bg-blue-500'"
+          class="rounded-xl flex-1 py-2 font-medium focus:border-0 focus:ring focus:ring-blue-200 ring-offset-2 ring-offset-blue-400 relative focus:z-10"
+        >
+          Recent
+        </button>
+        <button
+          x-on:mousedown="tab = 2"
+          :class="tab === 2 ? 'bg-white text-blue-600' : 'bg-blue-600 text-white hover:bg-blue-500'"
+          class="rounded-xl flex-1 py-2 font-medium focus:border-0 focus:ring focus:ring-blue-200 ring-offset-2 ring-offset-blue-400 relative focus:z-10"
+        >
+          Popular
+        </button>
+        <button
+          x-on:mousedown="tab = 3"
+          :class="tab === 3 ? 'bg-white text-blue-600' : 'bg-blue-600 text-white hover:bg-blue-500'"
+          class="rounded-xl flex-1 py-2 font-medium focus:border-0 focus:ring focus:ring-blue-200 ring-offset-2 ring-offset-blue-400 relative focus:z-10"
+        >
+          Trending
+        </button>
+      </div>
+      <!-- content -->
+      <div>
+        <div x-show="tab = 1" class="mt-2 rounded-xl p-3 bg-white">
+          <div class="rounded-lg hover:bg-slate-200 p-2">
+            <p class="font-bold">
+              Ask Me Anything: 10 answers to your questions about coffee
+            </p>
+            <span class="font-normal">2d ago · 9 comments · 5 shares</span>
+          </div>
+          <div class="rounded-lg hover:bg-slate-200 p-2">
+            <p class="font-bold">
+              Ask Me Anything: 10 answers to your questions about coffee
+            </p>
+            <span class="font-normal">2d ago · 9 comments · 5 shares</span>
+          </div>
+        </div>
+        <div x-show="tab = 2" class="mt-2 rounded-xl p-3 bg-white">
+          <div class="rounded-lg hover:bg-slate-200 p-2">
+            <p class="font-bold">
+              Ask Me Anything: 10 answers to your questions about coffee
+            </p>
+            <span class="font-normal">2d ago · 9 comments · 5 shares</span>
+          </div>
+          <div class="rounded-lg hover:bg-slate-200 p-2">
+            <p class="font-bold">
+              Ask Me Anything: 10 answers to your questions about coffee
+            </p>
+            <span class="font-normal">2d ago · 9 comments · 5 shares</span>
+          </div>
+        </div>
+        <div x-show="tab = 3" class="mt-2 rounded-xl p-3 bg-white">
+          <div class="rounded-lg hover:bg-slate-200 p-2">
+            <p class="font-bold">
+              Ask Me Anything: 10 answers to your questions about coffee
+            </p>
+            <span class="font-normal">2d ago · 9 comments · 5 shares</span>
+          </div>
+          <div class="rounded-lg hover:bg-slate-200 p-2">
+            <p class="font-bold">
+              Ask Me Anything: 10 answers to your questions about coffee
+            </p>
+            <span class="font-normal">2d ago · 9 comments · 5 shares</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="//unpkg.com/alpinejs" defer></script>
+  </body>
+</html>
